@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete Crafts Shop</title>
+    
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="shop.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="shop.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul class="left-nav">
+                    <li><a href="dupArtisans.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+                <ul class="right-nav">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-btn"><a href="login.html">Log in</a></button>
+                <button class="signup-btn"><a href="register.html">Sign up</a></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-text">
+            <h4>Think Creative</h4>
+            <h1>Trendy Luxury Crafts</h1>
+            <p>Creating smiles and spreading happiness for generations!</p>
+            <a href="#" class="btn">
+                <i class="ri-store-fill"></i>
+                Shop now
+            </a>
+        </div>
+
+        <div class="home-img">
+            <img src="ii.png" alt="Home Image">
+        </div>
+    </section>
+
+    <!-- Crafts Area -->
+    
+    <section class="crafts">
+        <h2>New Arrivals</h2>
+        <div class="crafts-content">
+            <div class="crafts-box">
+                <img src="p1.jpg" alt="Vases">
+                
+                <h3>Vase</h3>
+                <h4>₹300</h4>
+                <a href="#" class="crafts-btn" onclick="addToCart('Vases', 300)">Add to cart <i class="ri-store-fill"></i></a>
+            </div>
+
+            <div class="crafts-box">
+                <img src="p2.jpg" alt="Handicrafts">
+                
+                <h3>Handicraft</h3>
+                <h4>₹245</h4>
+                <a href="#" class="crafts-btn" onclick="addToCart('Handicrafts', 245)">Add to cart <i class="ri-store-fill"></i></a>
+            </div>
+
+            <div class="crafts-box">
+                <img src="p3.jpg" alt="Home Decor">
+                
+                <h3>Home Decor</h3>
+                <h4>₹115</h4>
+                <a href="#" class="crafts-btn" onclick="addToCart('Home Decor', 115)">Add to cart <i class="ri-store-fill"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Products -->
+    <section class="new-products">
+        <div class="center-in">
+            <img src="center.png" alt="New Arrivals" class="image">
+            <h2>Most Demanded</h2>
+        </div>
+        <div class="new-products-content">
+            <!-- Product Row -->
+            <div class="row">
+                <div class="Buddha">
+                    <img src="p4.jpg" alt="Demo Product 1" class="image1">
+                </div>
+                <h3>Buddha Statue</h3>
+                <h5>₹190</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Buddha Statue', 190)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="LadyStatue">
+                    <img src="p5.jpg" alt="Demo Product 2" class="image2" >
+                </div>
+                <h3>Lady Statue</h3>
+                <h5>₹200</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Lady Statue', 200)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="p6.jpg" alt="Demo Product 3" class="image">
+                </div>
+                <h3>Camel</h3>
+                <h5>₹150</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Camel', 150)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="p7.jpg" alt="Demo Product 4" class="image">
+                </div>
+                <h3>Shubh Labh Hanging</h3>
+                <h5>₹120</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Shubh Labh Hanging', 120)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="p8.jpg" alt="Demo Product 5" class="image">
+                </div>
+                <h3>Bamboo Basket</h3>
+                <h5>₹100</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Bamboo Basket', 100)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="p9.jpg" alt="Demo Product 6" class="image">
+                </div>
+                <h3>Rustin Handmade Wooden Vase</h3>
+                <h5>₹400</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Rustin Handmade Wooden Vase', 400)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="p10.jpg" alt="Demo Product 7" class="image">
+                </div>
+                <h3>Lady Candle Stand</h3>
+                <h5>₹230</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Lady Candle Stand', 230)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="p11.jpg" alt="Demo Product 8" class="image">
+                </div>
+                <h3>Foxie</h3>
+                <h5>₹250</h5>
+                <div class="r-btnn">
+                    <a href="#" onclick="addToCart('Foxie', 250)">Add to cart <i class="ri-shopping-cart-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5; /* Light gray background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+.cart-container {
+    background: #ffffff; /* White background for the cart */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600; /* Semi-bold heading */
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    font-weight: 500; /* Medium-weight text */
+}
+
+.cart-table th {
+    background-color: #007bff; /* Blue header */
+    color: #ffffff;
+    text-transform: uppercase; /* Uppercase for headings */
+}
+
+.cart-table tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray on hover */
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ccc; /* Border for the input */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+}
+
+.remove-btn {
+    background-color: #dc3545; /* Red for remove button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for effect */
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05); /* Slightly grow the button */
+}
+
+.cart-summary {
+    margin-top: 30px;
+    text-align: right;
+    border-top: 2px solid #007bff; /* Top border for summary */
+    padding-top: 20px; /* Space above summary */
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: 500; /* Medium-weight text */
+}
+
+.checkout-btn {
+    background-color: #28a745; /* Green for checkout */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for effect */
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly grow the button */
+}
+
+.empty-cart {
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .cart-table th, .cart-table td {
+        font-size: 14px;
+    }
+    .checkout-btn {
+        width: 100%;
+    }
+}

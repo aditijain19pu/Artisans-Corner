@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art & Craft Blog</title>
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Art & Craft Blog</h1>
+    <p>Explore tutorials, tips, and tricks to unleash your creativity!</p>
+  </header>
+
+  <main class="blog-container">
+    <article class="blog-post">
+      <h2>Paper Quilling for Beginners</h2>
+      <iframe 
+        src="https://youtu.be/fCTtpImMwmg?si=Uuj2wXis2GAcxp2" 
+        title="Paper Quilling for Beginners"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p>Learn the basics of paper quilling with this easy-to-follow tutorial. Perfect for beginners!</p>
+    </article>
+
+    <article class="blog-post">
+      <h2>DIY Macrame Wall Hanging</h2>
+      <iframe 
+        src="https://youtu.be/mtuWcT6ZoFE?si=7qQ3O4rj7B3vcPCD" 
+        title="DIY Macrame Wall Hanging"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p>Create a beautiful macrame wall hanging for your home with this step-by-step guide.</p>
+    </article>
+
+    <article class="blog-post">
+      <h2>Watercolor Painting Techniques</h2>
+      <iframe 
+        src="https://www.youtube.com/embed/SUeyGRzFC54" 
+        title="Watercolor Painting Techniques"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p>Discover essential watercolor painting techniques to enhance your artistic skills.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Artisans Corner | All rights reserved</p>
+  </footer>
+
+  <script>
+    // script.js
+
+// Get references to the search bar and blog posts
+const searchBar = document.getElementById("search-bar");
+const blogPosts = document.querySelectorAll(".blog-post");
+
+// Add an event listener for input in the search bar
+searchBar.addEventListener("input", (e) => {
+  const searchQuery = e.target.value.toLowerCase();
+
+  // Loop through each blog post
+  blogPosts.forEach((post) => {
+    const postTitle = post.querySelector("h2").textContent.toLowerCase();
+    const postDescription = post.querySelector("p").textContent.toLowerCase();
+
+    // Check if the search query matches the title or description
+    if (postTitle.includes(searchQuery) || postDescription.includes(searchQuery)) {
+      post.style.display = "block"; // Show matching posts
+    } else {
+      post.style.display = "none"; // Hide non-matching posts
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

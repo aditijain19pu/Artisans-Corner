@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete Crafts Shop Website Design</title>
+    
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="dupArtisans.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+            <nav>
+                <ul class="left-nav">
+                    <li><a href="shop.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+                <ul class="right-nav">
+                    
+                    
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <ul>
+                    <a href="profile.html"><i class="ri-user-line"></i></a>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-btn"><a href="login.html">Log in</a></button>
+                <button class="signup-btn"><a href="register.html">Sign up</a></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Get your next <span>DIY idea</span></h1>
+        </section>
+        <section><video autoplay muted loop src="video.mp4" type="video/mp4" alt="DIY 2"></video></section>
+<br>
+       </main>
+
+       
+    <section class="search-section">
+        <div class="search-content">
+            <div class="image-container">
+                <img src="p12.jpg" alt="Image 1" class="img1">
+                <img src="p13.jpg" alt="Image 2" class="img2">
+                <img src="p14.jpg" alt=" Image 3" class="img3">
+            </div>
+            <div class="search-box">
+                <div class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="New Ideas">
+                </div>
+            </div>
+        </div>
+        <div class="idea-box">
+            <h1>Search for an idea</h1>
+            <p>"What creative project do you want to explore next? Imagine something you're passionate about—like 'DIY  handicrafts'—and discover new ideas to spark your imagination."</p>
+            <button>Explore</button>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="left-column">
+            <div class="card">
+                <img src="p16.jpg" alt="Craft Example">
+                <div class="card-info">
+                    <h2>How to make perfect handicrafts for any occasion</h2>
+                    <p>By Artisans Corner</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <h1>See it, make it, try it, do it</h1>
+            <p>The best part of crafting is discovering new things and ideas from creative people around the world.</p>
+            <button class="explore-btn"><a href="dupArtisans.html">Explore</a></button>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="image-section">
+            <div class="image-grid">
+                <img src="signup.jpg" alt="Image 1">
+                <!-- Add more images as needed -->
+            </div>
+            <h1>Sign up to get your ideas</h1>
+        </div>
+
+        <div class="form-section">
+            <h2>Welcome to Artisans Corner</h2>
+            <p>Find new ideas to try</p>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <input type="password" placeholder="Create a password" required>
+                <input type="date" placeholder="Date of Birth" required>
+                <button type="submit">Continue</button>
+            </form>
+            <div class="google-signin">
+                <button id="google-signin-btn" onclick="googleSignIn()">Continue with Google</button>
+            </div>
+            <h4 id="already">already have a account? <a href="login.html">Login</a> </h4>
+            <p>By continuing, you agree to Artisans Corner <a href="#"> Terms of Service </a> and <a href="#">Privacy Policy </a>.</p>   
+        </div >
+    </div>    
+    <section class="how-it-works">
+        <p class="work">Here’s how it works</p>
+    </section>
+   
+
+    <footer>
+        <p>© 2024 Artisans Corner</p>
+    </footer>
+
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+    function googleSignIn() {
+        gapi.load('auth2', function() {
+            gapi.auth2.init({
+                client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+                scope: 'profile email' // Request profile and email access
+            }).then(function(auth2) {
+                auth2.signIn().then(function(googleUser) {
+                    const profile = googleUser.getBasicProfile();
+                    const id_token = googleUser.getAuthResponse().id_token;
+
+                    console.log('ID: ' + profile.getId());
+                    console.log('Name: ' + profile.getName());
+                    console.log('Email: ' + profile.getEmail());
+                    console.log('ID Token: ' + id_token); // Send this to your backend for verification
+
+                    // Here you can log the user in on your backend or store user info
+                    // For example:
+                    // fetch('/your-backend-endpoint', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify({ token: id_token })
+                    // });
+                }).catch(function(error) {
+                    console.error('Sign-in error:', error);
+                });
+            });
+        });
+    }
+
+    function googleSignOut() {
+        const auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+</script>
+
+
+</body>
+</html>
